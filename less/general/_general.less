@@ -1,0 +1,105 @@
+// body::-webkit-scrollbar { width: 0; }
+
+body{
+	background: @color_white;
+	font-family: @default_font_fam;
+}
+
+li{
+	font-size: 17px;
+	color: @text_color;
+}
+
+h2,
+h4,
+h5,
+h1,
+h3{
+	text-transform: uppercase;
+}
+
+h3{
+	font-size: 32px;
+	line-height: 32px;
+}
+
+h2{
+	font-size: 42px;
+	color: @dark_gray;
+	line-height: 50px;
+	font-weight: bold;
+}
+
+h4{
+	font-size: 20px;
+	color: #8d8c8b;
+	line-height: 24px;
+}
+
+h5{
+	font-size: 16px;
+	line-height: 20px;
+}
+
+h1{
+	font-size: 50px;
+	line-height: 60px;
+	color: @base_color_2;
+	font-weight: bold;
+}
+
+hgroup{
+	text-align: center;
+	 padding-top: 78px;
+   padding-bottom: 93px;
+}
+
+
+// @font-face {
+// 	 font-family: "Exo 2.0";
+//     src: url('../../fonts/Exo2-Regular.ttf');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+
+.ellipse{
+	.borderRadius(50%);
+  border-style: solid;
+  border-width: 6px;
+  border-color: rgb(254, 253, 253);
+  background-color: rgb(208, 29, 0);
+  width: 155px;
+  height: 155px;
+padding: 29px 10px;
+text-align: center;
+
+	h4,
+	h1,
+	h3{
+	color: @color_white;
+	}
+
+
+	h4{
+	letter-spacing: 1px;
+	}
+
+	&>*{
+	.text_cut;
+	}
+
+}
+
+
+footer{
+
+	h4{
+		color: #676564;
+	    margin-top: 12px;
+	}
+}
+
+*{
+	word-wrap: break-word;
+}
