@@ -2,6 +2,10 @@
 	display: inline-block;
     font-size: 32px;
     margin-right: 10px;
+
+    a{
+		.hvr-icon-grow;
+	}
 }
 
 [class*="top_menu"]{
@@ -42,12 +46,17 @@
 	padding: 0 9px;
 }
 
+.top_phone a{
+		.hvr-icon-grow;
+	}
+
 
 
 
 		button.navbar-toggle{
 		background-color: @base_color;
 		border: 0;
+		float: none;
 
 			.icon-bar{
 			background-color: @color_white;
@@ -144,10 +153,6 @@
 			height: 100%;
 		}
 
-		.product_text{
-			position: absolute;
-		}
-
 		img{
 			width: 100%;
 			.transition;
@@ -201,8 +206,11 @@
 				padding-right: 30px;
 			}
 
-			h1{
+			.count{
 				color: @color_white;
+				font-size: 50px;
+				line-height: 60px;
+				font-weight: bold;
 			}
 
 			.product_text>*{
@@ -417,6 +425,13 @@
 			display: inline-block;
 		}
 
+		.price_count{
+			font-size: 50px;
+			line-height: 60px;
+			font-weight: bold;
+			color: @color_white;
+		}
+
 		.count_prod{
 			text-align: right;
 		}
@@ -527,6 +542,8 @@
 		margin-right: 0;
 		margin-left: 17px;
 
+
+
 		.fa{
 		font-size: 44px;
 		}
@@ -547,16 +564,32 @@
 		padding: 7px 0;
 		display: block;
 		text-transform: capitalize;
+		.transition;
+		}
+
+		a:hover{
+			color: @base_color_2;
+		}
+
+	}
+
+	.footer_phone>li{
+		display: inline-block;
+
+		a{
+		.hvr-icon-grow;
+		.transition;
+		}
+
+		.fa{
+		font-size: 46px;
+		line-height: 46px;
+		margin-left: 9px;
 		}
 
 	}
 
 
-	.footer_phone .fa{
-		font-size: 46px;
-		line-height: 46px;
-	    margin-left: 9px;
-	}
 
 	.slide {
 		.base_effect;
@@ -801,64 +834,66 @@
 			padding-bottom: 30px;
 			padding-right: 15px;
 			padding-left: 15px;
+
+			&:before,
+			&:after{
+			display: none;
+			}
+
+			& > *:first-child{
+			width: 100%;
+			}
+
+			h1,
+			h4,
+			h5{
+			text-overflow: initial;
+			white-space: normal;
+			overflow: initial;
+			}
+
+			h1{
+			letter-spacing: 4px;
+			}
 		}
 
-		hgroup:before,
-		 hgroup:after{
-		 	display: none;
+		
+
+		.product_container{
+
+			.price{
+			padding-right: 15px;
+			}
+
+			.name{
+			padding-left: 15px;
+			}
+		}
+
+		 .most_popular{
+
+			.product_container h1{
+			font-size: 30px;
+			}
+
+			.product_container .usd{
+			font-size: 18px;
+			}
+
+			.product_container .product_text{
+			padding-right: 15px;
+			}
 		 }
 
-		  hgroup > *:first-child{
-		 	width: 100%;
-		 }
+		 
 
-		 hgroup{
-
-		 	h1,
-		 	h4,
-		 	h5{
-		 		text-overflow: initial;
-		 		white-space: normal;
-		 		overflow: initial;
-		 	}
-
-		 }
-
-		 .product_container .price{
-		 	padding-right: 15px;
-		 }
-
-		 .product_container .name{
-		 	padding-left: 15px;
-		 }
-
-		 .most_popular .product_container h1{
-		 	font-size: 30px;
-		 }
-
-		 .most_popular .product_container .usd{
-		 	font-size: 18px;
-		 }
-
-		 .most_popular .product_container .product_text{
-		 	padding-right: 15px;
-		 }
-
-		 .new_poducts hgroup{
-		 	margin-bottom: 0;
-		 }
-
-		 .new_poducts .product_container .cart_image{
-		 	width: 25%;
-		 }
+		
 
 		 .promotical_products .product_container{
-		 	padding-top: 25px;
+		 	padding-top: 90px;
 		 }
 
-		 hgroup h1{
-		 	letter-spacing: 4px;
-		 }
+		
 
 		 .new_poducts .product_container .product_name,
 		.promotical_products .product_container .name{
@@ -867,41 +902,98 @@
 		 	overflow: auto;
 		 }
 
-		 .services_list li:before{
-		 	display: none;
+		 .services_list{
+
+			li:before{
+			display: none;
+			}
+
+			li{
+			padding-left: 0;
+			text-align: center;
+			}
+
+			li h2{
+			font-size: 24px;
+			}
+
+			li h4{
+			font-size: 18px;
+			text-align: center;
+			}
 		 }
 
-		 .services_list li{
-		 	padding-left: 0;
-		 	text-align: center;
-		 }
-
-		 .services_list li h2{
-		 	font-size: 24px;
-		 }
-
-		 .services_list li h4{
-		 	font-size: 18px;
-		 	text-align: center;
-		 }
-
+	
 		 footer .soc_icon li{
 		 	margin-right: 6px;
 		 	margin-left: 6px;
 		 }
 
-		 .main_menu .navbar-nav > li > a:before{
-		 	display: none;
-		 }
+		
 
 		 .main_menu .navbar-nav > li a{
 			padding: 11px 15px;
 			text-align: center;
 			.transition;
 
+			&:before{
+			display: none;
+			}
+
 			&:hover{
 				background-color: @dark_gray;
 			}
+		}
+
+		.popular_poducts .products_list .col-lg-3 > .row > .col-lg-12,
+		.new_poducts .products_list > *,
+		.promotical_products .products_list > *
+		{
+			width: 50%;
+			float: left;
+		}
+
+		.new_poducts{
+
+			hgroup{
+			margin-bottom: 0;
+			}
+
+			.product_container .cart_image{
+			width: 25%;
+			}
+
+			.product_container .product_info{
+			flex-wrap: wrap;
+			}
+
+			.product_container .value{
+			width: 100%;
+			}
+
+			.product_container .cart_select{
+			width: 75%;
+			}
+
+			.product_container .cart_count{
+			width: 70%;
+			text-align: right;
+			}
+
+			.product_container .select_control{
+			width: 30%;
+			}
+
+			.product_container .cart_select, 
+			.product_container .cart_image{
+			max-width: 100%;
+			}
+			
+		}
+
+		.payment .fa{
+			margin-left: 12px;
+			margin-right: 12px;
 		}
 
 
@@ -910,38 +1002,17 @@
 
 	@media (max-width: 600px) {
 
-		.slider-text-container{
-			display: none;
+		.popular_poducts .products_list .col-lg-3 > .row > .col-lg-12,
+		.new_poducts .products_list > *,
+		.promotical_products .products_list > *
+		{
+			width: 100%;
+			float: none;
 		}
 
+		.slider-text-container,
 		.hit{
 			display: none;
-		}
-
-		.new_poducts .product_container .product_info{
-			flex-wrap: wrap;
-		}
-
-		.new_poducts .product_container .value{
-			width: 100%;
-		}
-
-		.new_poducts .product_container .cart_select{
-			width: 75%;
-		}
-
-		.new_poducts .product_container .cart_count{
-			width: 70%;
-			text-align: right;
-		}
-
-		.new_poducts .product_container .select_control{
-			width: 30%;
-		}
-
-		.new_poducts .product_container .cart_select, 
-		.new_poducts .product_container .cart_image{
-			max-width: 100%;
 		}
 
 		.footer_phone .fa{
@@ -953,8 +1024,31 @@
 
 	@media (max-width: 500px) {
 
+		hgroup{
+
+			h5,
+			h4{
+				margin-bottom: 10px;
+			}
+			
+
+			h1{
+				font-size: 25px;
+			line-height: 40px;
+			}
+		}
+
+		.payment .fa{
+			font-size: 35px;
+		}
+
 		.promotical_products .product_container{
 			padding-top: 96px;
+		}
+
+		footer .soc_icon li .fa,
+		.footer_phone > li .fa{
+			font-size: 30px;
 		}
 		
 	}
